@@ -7,6 +7,10 @@ import BlinkComponent from './components/BlinkComponent';
 import CountComponent from './components/CountComponent';
 import FocusInputButton from './components/FocusInputButton';
 import TodoInput from './components/TodoInput';
+import PrimeCalculator from './components/UseMemo';
+import { ThemeProvider } from './components/ThemeProvider';
+import ThemeButton from './components/ThemeButton';
+import Mypage from './components/MyPage';
 
 function App() {
   const [visible, setVisible] =React.useState(true)
@@ -20,6 +24,13 @@ function App() {
 
        {/* <FocusInputButton/> */}
        <TodoInput/>
+       {/* <PrimeCalculator/> */}
+
+       {/* <ThemeProvider> */}
+        {/* <ThemeButton/> */}
+        {/* <Mypage/> */}
+       {/* </ThemeProvider> */}
+
     </div>
   );
 }
