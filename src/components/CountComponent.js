@@ -8,9 +8,9 @@ export default function CountComponent(){
     }
 
     useEffect(()=>{ //component가 mount되거나, update될때 실행되는 함수
-        console.log("데이터 받아오기, 한번만 실행됩니다.");
+        console.log("데이터 받아오기, 한번만 실행됩니다."); // 리소스를 점유해줌
         return ()=>{
-            console.log(`메모리를 잡아먹으면 리소스 해제하는 함수를 return해 줘야 합니다.`) // return에는 리소스 해제해주는 부분을 작성해줘야 한다.
+            console.log(`메모리를 잡아먹으면 리소스 해제하는 함수를 return해 줘야 합니다.`) // return에는 리소스 해제해주는 부분을 작성해줘야 한다. -> 컴포넌트가 없어지거나, useEffect가 다시 실행될때 작동함
         }
     }, []);
     useEffect(()=>{

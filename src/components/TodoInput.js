@@ -16,9 +16,10 @@ export default function TodoInput(){
         setToDo(event.target.value);
         //console.log(toDo+"+"+event.target.value); toDO == evet.target.value
     }
+
     return (
             <div>
-                <h1>할일을 입력하세요!</h1>
+                <h1 style={{backgroundColor: "skyblue"}}>할일을 입력하세요!</h1>
                 <div>
                     <input type="text" name="toDoInput" onChange={handleToDoOnChange}/>
                     <button onClick={handleOnClick}>입력</button>

@@ -5,9 +5,14 @@ export default function ShowTodo(props) {
     return(
         <div>
         {props.toDoList.map((toDo) => (
-          <div key={toDo}>{toDo}</div> // Each child in a list should have a unique "key" prop해결방법
-        ))}
+          <div key={toDo} style={{backgroundColor:"pink", height: 40, margin:30}}>
+            {toDo} 
+            <button style={{margin:10}}>삭제</button>
+          </div> 
+        )
+        )}
       </div>
     );
 }
 
+// <button onClick={()=> onRemove(user.id)}>삭제</button>

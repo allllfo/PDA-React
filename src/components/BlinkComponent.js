@@ -8,7 +8,7 @@ export default function BlinkComponent({text}) {
         // const timeoutId = setInterval(()=> {
             // setShowText(showText=>!showText);
         // }, 1000)
-        // return () => {clearInterval(timeoutId)}
+        // return () => {clearInterval(timeoutId)} // clearInterval이 뭐라고..?
     // }, [])
 
     return (
