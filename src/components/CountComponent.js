@@ -1,11 +1,25 @@
+/*
 import React, { useEffect ,useState } from 'react'
 
 export default function CountComponent(){
     const [count, setCount] = useState(0)
 
-    const addCount = () => {
+    /*const addCount = () => {
         setCount(count+1);
-    }
+    }*/
+
+    // useCallback(()=> {
+    //     setCount(count+1);
+    // }, [] )// 이렇게 되면,count가 1에서 멈춘다.
+
+    // const addCount = useCallback((count)=>{
+    //     setCount(count+1);
+    // }, [setCount])// setCount라는 함수가 바뀔때만 재정의하겠다.
+
+    /*
+    const onAddCount = useCallback((e)=>{
+        setCount(count);
+    },[setCount,count])
 
     useEffect(()=>{ //component가 mount되거나, update될때 실행되는 함수
         console.log("데이터 받아오기, 한번만 실행됩니다."); // 리소스를 점유해줌
@@ -19,7 +33,8 @@ export default function CountComponent(){
     return(
         <div>
             <div>{count}</div>
-            <button onClick = {addCount}> 1 증가</button>
+            <button onClick = {addCount(count+1)}> 1 증가</button>
         </div>
     )
 }
+*/

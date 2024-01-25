@@ -1,5 +1,6 @@
 import React from 'react'
 
+//함수형 컴포넌트이다.
 export default function HelloWorld(){
     return(
         <div>

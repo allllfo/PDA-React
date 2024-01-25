@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const root = ReactDOM.createRoot(document.getElementById('root')); //root를 가져온다.
+root.render( //해당 root에 밑에 있는 것들을 렌더링 한다.
   <React.StrictMode>
     <App />
   </React.StrictMode>
