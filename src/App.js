@@ -11,6 +11,7 @@ import PrimeCalculator from './components/UseMemo';
 import { ThemeProvider } from './components/ThemeProvider';
 import ThemeButton from './components/ThemeButton';
 import Mypage from './components/MyPage';
+import TodoApp from './todo_example/TodoApp';
 
 function App() {
   const [visible, setVisible] =React.useState(true)
@@ -21,15 +22,14 @@ function App() {
       {/* <HelloWorld/> */}
       {/* <CaptionImage imgUrl="https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=9046601&filePath=L2Rpc2sxL25ld2RhdGEvMjAxNC8yMS9DTFM2L2FzYWRhbFBob3RvXzI0MTRfMjAxNDA0MTY=&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10004" caption="구름그림"/> */}
        {/* <BlinkComponent text={"hello"}/>  */}
-
        {/* <FocusInputButton/> */}
-       <TodoInput/>
+       {/* <TodoInput/> */}
        {/* <PrimeCalculator/> */}
-
        {/* <ThemeProvider> */}
         {/* <ThemeButton/> */}
         {/* <Mypage/> */}
        {/* </ThemeProvider> */}
+       <TodoApp/>
 
     </div>
   );

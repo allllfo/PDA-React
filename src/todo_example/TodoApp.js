@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import './TodoApp.css';
 import TodoList from './TodoList';
 
@@ -26,6 +26,19 @@ export default function TodoApp() {
     title: 'todo-2',
     color: 'blue'
   }]);
+
+  const deleteTodo = useCallback((todoId) =>{
+    setTodoList(prev=>{
+        return prev.filter((todo) =>{
+            return todo.id !== todoId
+        })
+    })
+
+    // setTodoList(todoList.filter(todo=> {
+    //     return todoid !== todoId
+    // })) 이렇게 되면, 밑에 디펜던시에 setTodoList, todoList를 넣어줘야함 => 함수에 대한 정의가 빈번해진다. 따라서 위의 코드가 더 좋다.
+
+  }, [setTodoList]) // 바뀔 게 없으므로 얘만 넣어줌 , 성능을 고려한다면 최대한 재정의가 안되게 짜야한다.
 
   return (
     <div className="todo-app">
@@ -64,14 +77,14 @@ export default function TodoApp() {
       </div>
       
       <div>
-        {todoList.map((todo, idx)=>{
+        {/* {todoList.map((todo, idx)=>{
           return (
             <div key={todo.id} style={{backgroundColor: todo.color}}> 
               {todo.title}
             </div>
           )
-        })}
-        {/* <TodoList /> */}
+        })} */}
+        <TodoList todoList={todoList} onDelete={deleteTodo}/>    {/* props로 저장 */}
       </div>
     </div>
   )
